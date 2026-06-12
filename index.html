@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --bg-primary: #ffffff;
       --bg-secondary: #f5f5f3;
@@ -27,7 +27,7 @@
       --radius-md: 8px;
       --radius-lg: 12px;
     }
-
+ 
     @media (prefers-color-scheme: dark) {
       :root {
         --bg-primary: #1c1c1a;
@@ -47,7 +47,7 @@
         --info-label: #85B7EB;
       }
     }
-
+ 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: var(--bg-secondary);
@@ -55,7 +55,7 @@
       min-height: 100vh;
       padding: 2rem 1rem;
     }
-
+ 
     .container {
       max-width: 820px;
       margin: 0 auto;
@@ -64,16 +64,16 @@
       border: 0.5px solid var(--border);
       padding: 2rem 2.5rem;
     }
-
+ 
     @media (max-width: 600px) {
       .container { padding: 1.25rem 1rem; }
       body { padding: 0.5rem; }
     }
-
+ 
     .header { margin-bottom: 2rem; }
     .header h1 { font-size: 20px; font-weight: 500; color: var(--text-primary); }
     .header p { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
-
+ 
     .section-title {
       font-size: 11px;
       font-weight: 500;
@@ -82,13 +82,13 @@
       letter-spacing: 0.06em;
       margin: 0 0 10px;
     }
-
+ 
     .separator {
       border: none;
       border-top: 0.5px solid var(--border);
       margin: 1.75rem 0;
     }
-
+ 
     .scenario-tabs { display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
     .tab-btn {
       padding: 7px 18px;
@@ -107,7 +107,7 @@
       border-color: var(--info-label);
       font-weight: 500;
     }
-
+ 
     .custom-row {
       display: flex;
       align-items: center;
@@ -126,14 +126,14 @@
       color: var(--text-primary);
       font-size: 14px;
     }
-
+ 
     .metric-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 10px;
       margin-bottom: 1.5rem;
     }
-
+ 
     .metric {
       background: var(--bg-secondary);
       border-radius: var(--radius-md);
@@ -142,19 +142,19 @@
     .metric .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
     .metric .value { font-size: 22px; font-weight: 500; color: var(--text-primary); }
     .metric .sub { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
-
+ 
     .metric.accent { background: var(--bg-accent); }
     .metric.accent .value { color: var(--accent); }
     .metric.accent .label, .metric.accent .sub { color: var(--accent-label); }
-
+ 
     .metric.warn { background: var(--bg-warn); }
     .metric.warn .value { color: var(--warn); }
     .metric.warn .label { color: var(--warn-label); }
-
+ 
     .metric.info { background: var(--bg-info); }
     .metric.info .value { color: var(--info); }
     .metric.info .label, .metric.info .sub { color: var(--info-label); }
-
+ 
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -162,7 +162,7 @@
       margin-bottom: 1.5rem;
     }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-
+ 
     table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 1.5rem; }
     th {
       text-align: left;
@@ -175,7 +175,7 @@
     td { padding: 8px; border-bottom: 0.5px solid var(--border); color: var(--text-primary); }
     td.num { text-align: right; font-variant-numeric: tabular-nums; }
     tr.total td { font-weight: 500; border-top: 1px solid var(--border-md); border-bottom: none; }
-
+ 
     .pill {
       display: inline-block;
       padding: 2px 10px;
@@ -185,7 +185,7 @@
     }
     .pill-green { background: var(--bg-accent); color: var(--accent); }
     .pill-amber { background: var(--bg-warn); color: var(--warn); }
-
+ 
     .progress-track {
       background: var(--bg-secondary);
       border-radius: 99px;
@@ -206,7 +206,7 @@
       color: var(--text-secondary);
       margin-top: 4px;
     }
-
+ 
     .footer {
       font-size: 12px;
       color: var(--text-secondary);
@@ -214,7 +214,7 @@
       padding-top: 1rem;
       border-top: 0.5px solid var(--border);
     }
-
+ 
     .logo-row {
       display: flex;
       align-items: center;
@@ -234,7 +234,7 @@
 </head>
 <body>
 <div class="container">
-
+ 
   <div class="header logo-row">
     <div>
       <h1>Obra Casa Amora — Dashboard financeiro</h1>
@@ -242,7 +242,7 @@
     </div>
     <span class="badge" id="data-atualizacao"></span>
   </div>
-
+ 
   <p class="section-title">Cenário de venda</p>
   <div class="scenario-tabs">
     <button class="tab-btn active" onclick="setScenario(1860000, this)">R$ 1.860.000</button>
@@ -253,9 +253,9 @@
     <label for="custom-val">Valor de venda:</label>
     <input type="number" id="custom-val" placeholder="Ex: 2100000" step="10000" oninput="setCustom()" />
   </div>
-
+ 
   <hr class="separator" />
-
+ 
   <p class="section-title">Visão geral</p>
   <div class="metric-grid">
     <div class="metric">
@@ -275,9 +275,9 @@
       <div class="value" id="m-roi">—</div>
     </div>
   </div>
-
+ 
   <hr class="separator" />
-
+ 
   <p class="section-title">Composição dos custos</p>
   <table>
     <thead>
@@ -289,9 +289,9 @@
     </thead>
     <tbody id="cost-table"></tbody>
   </table>
-
+ 
   <hr class="separator" />
-
+ 
   <p class="section-title">Distribuição do lucro — 50% / 50%</p>
   <div class="two-col">
     <div class="metric accent">
@@ -305,9 +305,9 @@
       <div class="sub" id="m-nua-mensal">— / mês (16 meses)</div>
     </div>
   </div>
-
+ 
   <hr class="separator" />
-
+ 
   <p class="section-title">Execução da obra</p>
   <div class="metric-grid">
     <div class="metric">
@@ -329,7 +329,7 @@
       <div class="sub">398.776 ÷ 6 meses</div>
     </div>
   </div>
-
+ 
   <div style="margin: 0.5rem 0 1.5rem;">
     <div style="display:flex; justify-content:space-between; font-size:13px; color:var(--text-secondary); margin-bottom:4px;">
       <span>Progresso financeiro da obra</span>
@@ -344,9 +344,9 @@
       <span>R$ 900k</span>
     </div>
   </div>
-
+ 
   <hr class="separator" />
-
+ 
   <p class="section-title">Ponto de equilíbrio</p>
   <div class="metric-grid" style="margin-bottom:0.5rem;">
     <div class="metric">
@@ -360,22 +360,22 @@
       <div class="sub">Impostos + comissão</div>
     </div>
   </div>
-
+ 
   <div class="footer">
     Custo obra estimado: R$ 900k (inclui despesas adm) &nbsp;·&nbsp; Terreno: R$ 350k &nbsp;·&nbsp; Custos de venda: 12% s/ VV (impostos + comissão)
   </div>
-
+ 
 </div>
-
+ 
 <script>
   document.getElementById('data-atualizacao').textContent =
     'Atualizado em ' + new Date().toLocaleDateString('pt-BR', {day:'2-digit', month:'2-digit', year:'numeric'});
-
+ 
   const OBRA = 900000;
   const TERRENO = 350000;
   const TAXA_VENDA = 0.12;
   const MESES_NUA = 16;
-
+ 
   const fmtK = v => {
     const abs = Math.abs(v);
     if(abs >= 1e6) return 'R$ ' + (v/1e6).toLocaleString('pt-BR', {minimumFractionDigits:3, maximumFractionDigits:3}) + ' M';
@@ -383,7 +383,7 @@
     return 'R$ ' + Math.round(v).toLocaleString('pt-BR');
   };
   const pct = v => v.toFixed(1).replace('.',',') + '%';
-
+ 
   function compute(venda) {
     const custoVenda = venda * TAXA_VENDA;
     const custoTotal = OBRA + TERRENO + custoVenda;
@@ -392,13 +392,13 @@
     const be = (OBRA + TERRENO) / (1 - TAXA_VENDA);
     return { venda, custoVenda, custoTotal, lucro, roi, be };
   }
-
+ 
   function render(venda) {
     const d = compute(venda);
     const half = d.lucro / 2;
     const roiM = (half / (OBRA + TERRENO)) * 100;
     const nuaMensal = half / MESES_NUA;
-
+ 
     document.getElementById('m-venda').textContent = fmtK(d.venda);
     document.getElementById('m-custo').textContent = fmtK(d.custoTotal);
     document.getElementById('m-lucro').textContent = fmtK(d.lucro);
@@ -408,7 +408,7 @@
     document.getElementById('m-nua').textContent = fmtK(half);
     document.getElementById('m-nua-mensal').textContent = fmtK(nuaMensal) + ' / mês (16 meses)';
     document.getElementById('m-cv').textContent = fmtK(d.custoVenda);
-
+ 
     const gap = d.venda - d.be;
     document.getElementById('m-be').textContent = fmtK(d.be);
     const gapEl = document.getElementById('m-be-gap');
@@ -417,7 +417,7 @@
     } else {
       gapEl.innerHTML = '<span class="pill pill-amber">Preço de venda ' + fmtK(Math.abs(gap)) + ' abaixo do BE</span>';
     }
-
+ 
     const items = [
       ['Custo de obra (inclui despesas adm)', OBRA],
       ['Terreno (aporte Morcelli)', TERRENO],
@@ -435,7 +435,7 @@
     trTotal.innerHTML = `<td>Total</td><td class="num">${fmtK(d.custoTotal)}</td><td class="num">${pct(d.custoTotal/d.venda*100)}</td>`;
     tbody.appendChild(trTotal);
   }
-
+ 
   function setScenario(val, btn) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
@@ -449,12 +449,12 @@
       render(val);
     }
   }
-
+ 
   function setCustom() {
     const v = parseFloat(document.getElementById('custom-val').value);
     if(v > 100000) render(v);
   }
-
+ 
   render(1860000);
 </script>
 </body>
